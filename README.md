@@ -5,10 +5,15 @@ Realtime Socket.IO gateway + modular chat domain (designed for future extraction
 ## Architecture
 
 ```txt
-socket/                    # Transport (Socket.IO) — stays in gateway
+socket/                    # Transport infra — stays in gateway
+  support/                 # SocketClientHelper, SocketAckHelper
+  InfrastructureSocketHandler.java   # ping
+  SocketServerRunner.java            # event registry
 modules/chat/
-  conversation/            # Conversations + participants
-  message/                 # Messages persistence
+  conversation/
+    ConversationSocketHandler.java   # conversation:join / leave
+  message/
+    MessageSocketHandler.java        # message:send
   realtime/                # Fan-out to Socket.IO rooms
 common/                    # Shared API, exceptions, pagination
 ```

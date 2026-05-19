@@ -47,6 +47,10 @@ public class ConversationService {
 		return toResponse(conversationId);
 	}
 
+	public void joinConversation(Long conversationId, String userId) {
+		assertParticipant(conversationId, userId);
+	}
+
 	public void assertParticipant(Long conversationId, String userId) {
 		if (!participantRepository.existsByConversationIdAndUserId(conversationId, userId)) {
 			throw new ForbiddenException("You are not a participant of conversation " + conversationId);

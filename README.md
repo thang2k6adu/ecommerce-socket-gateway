@@ -43,8 +43,27 @@ socket.on("pong", (data) => console.log("pong", data));
 | `ping` | `pong` |
 | `conversation:join` | `conversation:joined` |
 | `conversation:leave` | `conversation:left` |
+| `message:send` (ACK) | `message:new` → room `user:{recipientId}` |
 
 On connect, server joins `user:{userId}` and emits `connected`.
+
+### Message flow (no DB yet)
+
+```javascript
+// User A
+socket.emit("message:send", {
+  conversationId: 1,
+  recipientId: "user-b-id",
+  content: "Hello",
+  clientMessageId: "temp-1",
+}, (ack) => console.log("ACK", ack));
+
+// User B (connected with query userId=user-b-id)
+socket.on("message:new", (msg) => console.log("new message", msg));
+```
+
+ACK success: `{ ok: true, messageId, conversationId, clientMessageId, createdAt }`  
+ACK error: `{ ok: false, error: "..." }`
 
 ## JWT auth (production)
 

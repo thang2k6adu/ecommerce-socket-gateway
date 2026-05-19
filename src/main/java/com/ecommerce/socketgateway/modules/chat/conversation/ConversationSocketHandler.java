@@ -2,7 +2,7 @@ package com.ecommerce.socketgateway.modules.chat.conversation;
 
 import com.corundumstudio.socketio.AckRequest;
 import com.corundumstudio.socketio.SocketIOClient;
-import com.ecommerce.socketgateway.modules.chat.realtime.ChatRealtimePublisher;
+import com.ecommerce.socketgateway.socket.ChatRoomNames;
 import com.ecommerce.socketgateway.socket.SocketConnectListener;
 import com.ecommerce.socketgateway.socket.support.SocketAckHelper;
 import com.ecommerce.socketgateway.socket.support.SocketClientHelper;
@@ -31,7 +31,7 @@ public class ConversationSocketHandler {
 
 			conversationService.joinConversation(conversationId, userId);
 
-			String room = ChatRealtimePublisher.CONVERSATION_ROOM_PREFIX + conversationId;
+			String room = ChatRoomNames.conversationRoom(conversationId);
 			client.joinRoom(room);
 			log.info("[SOCKET] userId={} joined room={}", userId, room);
 
@@ -51,7 +51,7 @@ public class ConversationSocketHandler {
 			return;
 		}
 
-		String room = ChatRealtimePublisher.CONVERSATION_ROOM_PREFIX + conversationId;
+		String room = ChatRoomNames.conversationRoom(conversationId);
 		client.leaveRoom(room);
 		log.info("[SOCKET] userId={} left room={}",
 				client.get(SocketConnectListener.USER_ID_ATTR), room);

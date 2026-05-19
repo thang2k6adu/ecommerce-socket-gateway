@@ -13,8 +13,10 @@ modules/chat/
   conversation/
     ConversationSocketHandler.java   # conversation:join / leave
   message/
-    MessageSocketHandler.java        # message:send
-  realtime/                # Fan-out to Socket.IO rooms
+    MessageSocketHandler.java        # message:send (inbound)
+    MessageSocketPublisher.java      # message fan-out (outbound)
+socket/
+  ChatRoomNames.java                 # user: / conversation: room helpers
 common/                    # Shared API, exceptions, pagination
 ```
 

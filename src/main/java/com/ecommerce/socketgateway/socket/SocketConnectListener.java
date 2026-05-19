@@ -15,7 +15,6 @@ import java.util.Map;
 public class SocketConnectListener implements ConnectListener {
 
 	public static final String USER_ID_ATTR = "userId";
-	public static final String USER_ROOM_PREFIX = "user:";
 
 	private final SocketAuthService socketAuthService;
 
@@ -33,7 +32,7 @@ public class SocketConnectListener implements ConnectListener {
 
 	private void registerClient(SocketIOClient client, String userId) {
 		client.set(USER_ID_ATTR, userId);
-		String userRoom = USER_ROOM_PREFIX + userId;
+		String userRoom = ChatRoomNames.userRoom(userId);
 		client.joinRoom(userRoom);
 
 		log.info("[SOCKET] Connected: sessionId={}, userId={}, room={}",

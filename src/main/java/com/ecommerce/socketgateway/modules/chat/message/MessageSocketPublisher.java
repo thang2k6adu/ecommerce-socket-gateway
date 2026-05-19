@@ -1,27 +1,22 @@
-package com.ecommerce.socketgateway.modules.chat.realtime;
+package com.ecommerce.socketgateway.modules.chat.message;
 
 import com.corundumstudio.socketio.SocketIOServer;
 import com.ecommerce.socketgateway.modules.chat.message.dto.response.MessageResponse;
-import com.ecommerce.socketgateway.modules.chat.message.MessageMapper;
-import com.ecommerce.socketgateway.socket.SocketConnectListener;
+import com.ecommerce.socketgateway.modules.chat.message.dto.socket.MessageRealtimePayload;
+import com.ecommerce.socketgateway.socket.ChatRoomNames;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-/**
- * Transport layer: fan-out persisted chat events to Socket.IO rooms.
- * Keeps {@code modules/chat} domain free of netty-socketio types in services.
- */
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class ChatRealtimePublisher {
+public class MessageSocketPublisher {
 
 	public static final String EVENT_MESSAGE_NEW = "message:new";
 	public static final String EVENT_MESSAGE_CREATED = "message:created";
-	public static final String CONVERSATION_ROOM_PREFIX = "conversation:";
 
 	private final SocketIOServer socketIOServer;
 	private final MessageMapper messageMapper;
@@ -31,15 +26,15 @@ public class ChatRealtimePublisher {
 
 		for (String participantId : participantUserIds) {
 			socketIOServer
-					.getRoomOperations(SocketConnectListener.USER_ROOM_PREFIX + participantId)
+					.getRoomOperations(ChatRoomNames.userRoom(participantId))
 					.sendEvent(EVENT_MESSAGE_NEW, payload);
 		}
 
 		socketIOServer
-				.getRoomOperations(CONVERSATION_ROOM_PREFIX + message.getConversationId())
+				.getRoomOperations(ChatRoomNames.conversationRoom(message.getConversationId()))
 				.sendEvent(EVENT_MESSAGE_CREATED, payload);
 
-		log.debug("[REALTIME] message published conversationId={}, messageId={}",
+		log.debug("[SOCKET] message published conversationId={}, messageId={}",
 				message.getConversationId(), message.getId());
 	}
 

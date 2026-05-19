@@ -1,8 +1,8 @@
 package com.ecommerce.socketgateway.modules.chat.message;
 
 import com.ecommerce.socketgateway.modules.chat.message.dto.response.MessageResponse;
+import com.ecommerce.socketgateway.modules.chat.message.dto.socket.MessageRealtimePayload;
 import com.ecommerce.socketgateway.modules.chat.message.entity.MessageEntity;
-import com.ecommerce.socketgateway.modules.chat.realtime.MessageRealtimePayload;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -11,7 +11,6 @@ import com.ecommerce.socketgateway.modules.chat.conversation.entity.Conversation
 import com.ecommerce.socketgateway.modules.chat.message.dto.request.SendMessageRequest;
 import com.ecommerce.socketgateway.modules.chat.message.dto.response.MessageResponse;
 import com.ecommerce.socketgateway.modules.chat.message.entity.MessageEntity;
-import com.ecommerce.socketgateway.modules.chat.realtime.ChatRealtimePublisher;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -36,7 +35,7 @@ public class MessageService {
 	private final ConversationRepository conversationRepository;
 	private final ConversationService conversationService;
 	private final MessageMapper messageMapper;
-	private final ChatRealtimePublisher chatRealtimePublisher;
+	private final MessageSocketPublisher messageSocketPublisher;
 
 	public MessageResponse sendMessage(String senderId, SendMessageRequest request) {
 		Long conversationId = request.getConversationId();
@@ -60,7 +59,7 @@ public class MessageService {
 
 		MessageResponse response = messageMapper.toResponse(message);
 		List<String> participantIds = conversationService.getParticipantUserIds(conversationId);
-		chatRealtimePublisher.publishMessageCreated(response, participantIds);
+		messageSocketPublisher.publishMessageCreated(response, participantIds);
 
 		log.info("[CHAT] Message saved id={}, conversationId={}, senderId={}",
 				message.getId(), conversationId, senderId);

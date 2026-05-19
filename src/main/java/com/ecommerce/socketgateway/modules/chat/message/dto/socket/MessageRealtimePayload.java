@@ -1,4 +1,4 @@
-package com.ecommerce.socketgateway.modules.chat.realtime;
+package com.ecommerce.socketgateway.modules.chat.message.dto.socket;
 
 import lombok.Builder;
 import lombok.Value;

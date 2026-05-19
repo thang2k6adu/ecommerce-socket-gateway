@@ -1,16 +1,15 @@
-package com.ecommerce.socketgateway.socket.dto;
+package com.ecommerce.socketgateway.modules.chat.realtime;
 
 import lombok.Builder;
 import lombok.Value;
 
 @Value
 @Builder
-public class MessageNewPayload {
+public class MessageRealtimePayload {
 
 	String messageId;
 	Long conversationId;
 	String senderId;
-	String recipientId;
 	String content;
 	String clientMessageId;
 	String createdAt;

@@ -1,79 +1,72 @@
 # Socket Gateway
 
-Realtime Socket.IO gateway for ecommerce. Handles WebSocket connections, room management, and event fan-out (Kafka integration planned).
+Realtime Socket.IO gateway + modular chat domain (designed for future extraction to **Chat Service**).
+
+## Architecture
+
+```txt
+socket/                    # Transport (Socket.IO) — stays in gateway
+modules/chat/
+  conversation/            # Conversations + participants
+  message/                 # Messages persistence
+  realtime/                # Fan-out to Socket.IO rooms
+common/                    # Shared API, exceptions, pagination
+```
 
 ## Ports
 
 | Port | Purpose |
 |------|---------|
-| 8090 | Spring Boot HTTP (actuator health) |
-| 9093 | Socket.IO (netty-socketio) |
+| 8090 | HTTP REST + actuator |
+| 9093 | Socket.IO |
 
-## Run locally
+## Database
+
+PostgreSQL database `chat_db` (default port `5434` in `.env.example`).
 
 ```bash
-cp .env.example .env   # optional
+createdb chat_db   # or via Docker
 ./mvnw spring-boot:run
 ```
 
-Health: `curl http://localhost:8090/actuator/health`
+## REST API (dev: header `X-User-Id`)
 
-## Dev connect (auth disabled)
+| Method | Path | Description |
+|--------|------|-------------|
+| POST | `/api/chat/conversations` | Create/get direct conversation `{ "otherUserId": "user-b" }` |
+| GET | `/api/chat/conversations` | List my conversations |
+| GET | `/api/chat/conversations/{id}` | Get conversation |
+| POST | `/api/chat/messages` | Send message `{ "conversationId", "content", "clientMessageId?" }` |
+| GET | `/api/chat/conversations/{id}/messages` | List messages (paginated) |
 
-Default `SOCKET_AUTH_ENABLED=false`. Connect with `userId` query param:
+## Socket events
 
-```javascript
-import { io } from "socket.io-client";
+| Emit | Description |
+|------|-------------|
+| `message:send` | Same body as REST `SendMessageRequest` — saves DB + realtime |
+| `conversation:join` | Join `conversation:{id}` (membership checked) |
+| `ping` | Health |
 
-const socket = io("http://localhost:9093", {
-  query: { userId: "123" },
-  transports: ["websocket", "polling"],
-});
+| Listen | Description |
+|--------|-------------|
+| `message:new` | Inbox realtime (user room) |
+| `message:created` | Open chat screen (conversation room) |
+| `connected` | After connect |
 
-socket.on("connect", () => console.log("connected", socket.id));
-socket.on("connected", (data) => console.log("server ack", data));
-socket.emit("ping", "hello");
-socket.on("pong", (data) => console.log("pong", data));
-```
-
-## Events
-
-| Client → Server | Server → Client |
-|-----------------|-----------------|
-| `ping` | `pong` |
-| `conversation:join` | `conversation:joined` |
-| `conversation:leave` | `conversation:left` |
-| `message:send` (ACK) | `message:new` → room `user:{recipientId}` |
-
-On connect, server joins `user:{userId}` and emits `connected`.
-
-### Message flow (no DB yet)
+## Dev connect
 
 ```javascript
-// User A
+const socket = io("http://localhost:9093", { query: { userId: "user-a" } });
 socket.emit("message:send", {
   conversationId: 1,
-  recipientId: "user-b-id",
-  content: "Hello",
-  clientMessageId: "temp-1",
-}, (ack) => console.log("ACK", ack));
-
-// User B (connected with query userId=user-b-id)
-socket.on("message:new", (msg) => console.log("new message", msg));
-```
-
-ACK success: `{ ok: true, messageId, conversationId, clientMessageId, createdAt }`  
-ACK error: `{ ok: false, error: "..." }`
-
-## JWT auth (production)
-
-Set `SOCKET_AUTH_ENABLED=true` and pass token:
-
-```javascript
-io("http://localhost:9093", {
-  auth: { token: accessToken },
-  transports: ["websocket", "polling"],
+  content: "Hi",
+  clientMessageId: "tmp-1",
 });
 ```
 
-Or query `?token=...` / header `Authorization: Bearer ...`.
+```bash
+curl -X POST http://localhost:8090/api/chat/conversations \
+  -H "Content-Type: application/json" \
+  -H "X-User-Id: user-a" \
+  -d '{"otherUserId":"user-b"}'
+```

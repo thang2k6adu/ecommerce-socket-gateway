@@ -2,7 +2,7 @@ package com.ecommerce.socketgateway.socket;
 
 import com.corundumstudio.socketio.SocketIOServer;
 import com.ecommerce.socketgateway.config.SocketProperties;
-import com.ecommerce.socketgateway.socket.dto.MessageSendRequest;
+import com.ecommerce.socketgateway.modules.chat.message.dto.request.SendMessageRequest;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import lombok.RequiredArgsConstructor;
@@ -25,11 +25,10 @@ public class SocketServerRunner {
 		socketIOServer.addConnectListener(socketConnectListener);
 		socketIOServer.addDisconnectListener(socketDisconnectListener);
 
-		// socketEventHandler = (client, data, ackSender) -> { socketEventHandler.onPing(client, data, ackSender); }
 		socketIOServer.addEventListener("ping", String.class, socketEventHandler::onPing);
 		socketIOServer.addEventListener("conversation:join", Long.class, socketEventHandler::onJoinConversation);
 		socketIOServer.addEventListener("conversation:leave", Long.class, socketEventHandler::onLeaveConversation);
-		socketIOServer.addEventListener("message:send", MessageSendRequest.class, socketEventHandler::onMessageSend);
+		socketIOServer.addEventListener("message:send", SendMessageRequest.class, socketEventHandler::onMessageSend);
 
 		socketIOServer.start();
 		log.info("[SOCKET] Server started at {}:{} (auth.enabled={})",

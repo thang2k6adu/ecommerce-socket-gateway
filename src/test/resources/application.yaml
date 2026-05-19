@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/ecommerce
+          jwk-set-uri: http://localhost:8180/realms/ecommerce/protocol/openid-connect/certs
+
+socket:
+  port: 19093
+  auth:
+    enabled: false
+
+server:
+  port: 0

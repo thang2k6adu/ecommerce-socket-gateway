@@ -69,6 +69,8 @@ Notes:
 
 - Existing databases are adopted via `baseline-on-migrate=true`.
 - The repeatable migration fixes legacy `conversations_type_check` that only allowed `DIRECT`.
+- Flyway history table is isolated per service via `FLYWAY_TABLE` (default:
+  `flyway_schema_history_socket_gateway`) to avoid collisions in shared DB setups.
 
 ## REST API
 

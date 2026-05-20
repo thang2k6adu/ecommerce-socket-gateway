@@ -35,6 +35,12 @@ public class ConversationEntity {
 	@Column(nullable = false, length = 20)
 	private ConversationType type;
 
+	/**
+	 * For {@link ConversationType#SUPPORT}: canonical customer user id (JWT subject). Null for DIRECT.
+	 */
+	@Column(name = "support_customer_user_id", length = 128, unique = true)
+	private String supportCustomerUserId;
+
 	@Column(length = 500)
 	private String lastMessagePreview;
 

@@ -1,6 +1,8 @@
 package com.ecommerce.socketgateway.modules.chat.conversation;
 
 import com.ecommerce.socketgateway.common.api.ApiResponse;
+import com.ecommerce.socketgateway.common.exception.ForbiddenException;
+import com.ecommerce.socketgateway.common.security.ChatRoleHelper;
 import com.ecommerce.socketgateway.common.security.ChatUserContext;
 import com.ecommerce.socketgateway.modules.chat.conversation.dto.request.CreateDirectConversationRequest;
 import com.ecommerce.socketgateway.modules.chat.conversation.dto.response.ConversationResponse;
@@ -25,6 +27,37 @@ public class ConversationController {
 
 	private final ConversationService conversationService;
 	private final ChatUserContext chatUserContext;
+
+	@PostMapping("/support")
+	public ResponseEntity<ApiResponse<ConversationResponse>> createOrGetSupport(Authentication authentication) {
+		if (ChatRoleHelper.isAdmin(authentication)) {
+			throw new ForbiddenException("Admins cannot use the customer support conversation endpoint");
+		}
+		String userId = chatUserContext.requireUserId(authentication);
+		ConversationResponse response = conversationService.createOrGetSupportConversation(userId);
+		return ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse.success(response));
+	}
+
+	@GetMapping("/support/queue")
+	public ResponseEntity<ApiResponse<List<ConversationResponse>>> supportQueue(Authentication authentication) {
+		if (!ChatRoleHelper.isAdmin(authentication)) {
+			throw new ForbiddenException("Admin role required");
+		}
+		chatUserContext.requireUserId(authentication);
+		return ResponseEntity.ok(ApiResponse.success(conversationService.listUnclaimedSupportQueue()));
+	}
+
+	@PostMapping("/{conversationId}/claim")
+	public ResponseEntity<ApiResponse<ConversationResponse>> claimSupport(
+			@PathVariable Long conversationId,
+			Authentication authentication) {
+		if (!ChatRoleHelper.isAdmin(authentication)) {
+			throw new ForbiddenException("Admin role required");
+		}
+		String adminId = chatUserContext.requireUserId(authentication);
+		ConversationResponse response = conversationService.claimSupportConversation(conversationId, adminId);
+		return ResponseEntity.ok(ApiResponse.success(response));
+	}
 
 	@PostMapping
 	public ResponseEntity<ApiResponse<ConversationResponse>> createDirect(

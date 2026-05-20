@@ -34,6 +34,12 @@ public class GlobalExceptionHandler {
 		return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ApiResponse.error(ex.getMessage()));
 	}
 
+	@ExceptionHandler(ConflictException.class)
+	public ResponseEntity<ApiResponse<Void>> handleConflict(ConflictException ex) {
+		log.warn("Conflict: {}", ex.getMessage());
+		return ResponseEntity.status(HttpStatus.CONFLICT).body(ApiResponse.error(ex.getMessage()));
+	}
+
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<ApiResponse<Map<String, String>>> handleValidation(MethodArgumentNotValidException ex) {
 		Map<String, String> errors = new HashMap<>();

@@ -63,11 +63,16 @@ PostgreSQL `chat_db` (default port `5434`).
 
 | Method | Path | Description |
 |--------|------|-------------|
+| POST | `/api/chat/conversations/support` | Customer: create/get single **SUPPORT** thread (JWT must not be admin) |
+| GET | `/api/chat/conversations/support/queue` | Admin: list unclaimed support conversations |
+| POST | `/api/chat/conversations/{id}/claim` | Admin: claim support thread (409 if already claimed) |
 | POST | `/api/chat/conversations` | Create/get direct `{ "otherUserId": "<jwt-sub>" }` |
 | GET | `/api/chat/conversations` | List conversations |
 | GET | `/api/chat/conversations/{id}` | Get conversation |
 | POST | `/api/chat/messages` | Send message |
 | GET | `/api/chat/conversations/{id}/messages` | List messages (paginated) |
+
+Expose REST via API Gateway: route **`/api/chat/**`** → Socket Gateway (see `API-GATEWAY-ECOMMERCE` `application.yaml`).
 
 ## Socket events
 

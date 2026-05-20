@@ -13,6 +13,10 @@ public class ConversationResponse {
 
 	Long id;
 	ConversationType type;
+	/** For SUPPORT: customer user id; null for DIRECT. */
+	String supportCustomerUserId;
+	/** For SUPPORT: true when an admin has joined (second participant). */
+	boolean claimed;
 	String lastMessagePreview;
 	Instant lastMessageAt;
 	Instant createdAt;

@@ -2,7 +2,9 @@ package com.ecommerce.socketgateway.modules.chat.conversation;
 
 import com.ecommerce.socketgateway.modules.chat.conversation.entity.ConversationEntity;
 import com.ecommerce.socketgateway.modules.chat.conversation.entity.ConversationType;
+import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -39,5 +41,19 @@ public interface ConversationRepository extends JpaRepository<ConversationEntity
 			ORDER BY c.lastMessageAt DESC NULLS LAST, c.updatedAt DESC
 			""")
 	List<ConversationEntity> findAllForUser(@Param("userId") String userId);
+
+	Optional<ConversationEntity> findByTypeAndSupportCustomerUserId(ConversationType type, String supportCustomerUserId);
+
+	@Query("""
+			SELECT c FROM ConversationEntity c
+			WHERE c.type = :supportType
+			AND (SELECT COUNT(p) FROM ConversationParticipantEntity p WHERE p.conversation = c) = 1
+			ORDER BY c.lastMessageAt DESC NULLS LAST, c.createdAt DESC
+			""")
+	List<ConversationEntity> findUnclaimedSupportConversations(@Param("supportType") ConversationType supportType);
+
+	@Lock(LockModeType.PESSIMISTIC_WRITE)
+	@Query("SELECT c FROM ConversationEntity c WHERE c.id = :id")
+	Optional<ConversationEntity> findByIdForUpdate(@Param("id") Long id);
 
 }

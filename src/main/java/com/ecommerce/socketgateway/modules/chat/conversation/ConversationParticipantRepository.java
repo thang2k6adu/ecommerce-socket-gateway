@@ -14,4 +14,6 @@ public interface ConversationParticipantRepository extends JpaRepository<Convers
 
 	boolean existsByConversationIdAndUserId(Long conversationId, String userId);
 
+	long countByConversationId(Long conversationId);
+
 }

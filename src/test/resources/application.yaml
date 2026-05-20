@@ -16,6 +16,8 @@ spring:
         jwt:
           issuer-uri: http://localhost:8180/realms/ecommerce
           jwk-set-uri: http://localhost:8180/realms/ecommerce/protocol/openid-connect/certs
+  flyway:
+    enabled: false
 
 socket:
   port: 19093

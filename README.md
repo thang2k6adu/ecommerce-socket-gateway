@@ -59,6 +59,17 @@ PostgreSQL `chat_db` (default port `5434`).
 ./mvnw spring-boot:run
 ```
 
+Flyway is enabled by default in main profile:
+
+- `V2__init_chat_schema.sql`: creates base chat tables for new databases.
+- `R__sync_support_conversation_schema.sql`: repeatable safety migration that aligns
+  `conversations` schema and check constraint with `SUPPORT` type.
+
+Notes:
+
+- Existing databases are adopted via `baseline-on-migrate=true`.
+- The repeatable migration fixes legacy `conversations_type_check` that only allowed `DIRECT`.
+
 ## REST API
 
 | Method | Path | Description |

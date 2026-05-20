@@ -2,6 +2,8 @@ package com.ecommerce.socketgateway.modules.chat.message;
 
 import com.corundumstudio.socketio.AckRequest;
 import com.corundumstudio.socketio.SocketIOClient;
+import com.ecommerce.socketgateway.integrations.chatcore.ChatCoreClient;
+import com.ecommerce.socketgateway.integrations.chatcore.dto.InternalSendMessageResult;
 import com.ecommerce.socketgateway.modules.chat.message.dto.request.SendMessageRequest;
 import com.ecommerce.socketgateway.modules.chat.message.dto.response.MessageResponse;
 import com.ecommerce.socketgateway.socket.support.SocketAckHelper;
@@ -17,7 +19,8 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class MessageSocketHandler {
 
-	private final MessageService messageService;
+	private final ChatCoreClient chatCoreClient;
+	private final MessageSocketPublisher messageSocketPublisher;
 	private final SocketClientHelper clientHelper;
 	private final SocketAckHelper ackHelper;
 
@@ -29,7 +32,9 @@ public class MessageSocketHandler {
 				return;
 			}
 
-			MessageResponse saved = messageService.sendMessage(senderId, request);
+			InternalSendMessageResult result = chatCoreClient.sendMessage(senderId, request);
+			MessageResponse saved = result.getMessage();
+			messageSocketPublisher.publishMessageCreated(saved, result.getParticipantUserIds());
 			ackHelper.success(ack, Map.of(
 					"ok", true,
 					"messageId", saved.getId().toString(),

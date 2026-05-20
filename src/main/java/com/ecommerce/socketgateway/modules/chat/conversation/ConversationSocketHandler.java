@@ -2,6 +2,7 @@ package com.ecommerce.socketgateway.modules.chat.conversation;
 
 import com.corundumstudio.socketio.AckRequest;
 import com.corundumstudio.socketio.SocketIOClient;
+import com.ecommerce.socketgateway.integrations.chatcore.ChatCoreClient;
 import com.ecommerce.socketgateway.socket.ChatRoomNames;
 import com.ecommerce.socketgateway.socket.SocketConnectListener;
 import com.ecommerce.socketgateway.socket.support.SocketAckHelper;
@@ -17,7 +18,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class ConversationSocketHandler {
 
-	private final ConversationService conversationService;
+	private final ChatCoreClient chatCoreClient;
 	private final SocketClientHelper clientHelper;
 	private final SocketAckHelper ackHelper;
 
@@ -29,7 +30,7 @@ public class ConversationSocketHandler {
 				return;
 			}
 
-			conversationService.joinConversation(conversationId, userId);
+			chatCoreClient.assertConversationJoinable(conversationId, userId);
 
 			String room = ChatRoomNames.conversationRoom(conversationId);
 			client.joinRoom(room);

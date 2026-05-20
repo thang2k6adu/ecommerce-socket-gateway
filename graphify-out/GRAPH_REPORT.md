@@ -1,16 +1,16 @@
-# Graph Report - SOCKET-GATEWAY-ECOMMERCE  (2026-05-19)
+# Graph Report - SOCKET-GATEWAY-ECOMMERCE  (2026-05-20)
 
 ## Corpus Check
-- 14 files · ~2,731 words
+- 37 files · ~3,907 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 60 nodes · 60 edges · 13 communities (1 shown, 12 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
+- 240 nodes · 291 edges · 35 communities (8 shown, 27 thin omitted)
+- Extraction: 75% EXTRACTED · 25% INFERRED · 0% AMBIGUOUS · INFERRED: 72 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d032a903`
+- Built from commit: `352f5ea0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,35 +28,92 @@
 - [[_COMMUNITY_Community 10|Community 10]]
 - [[_COMMUNITY_Community 11|Community 11]]
 - [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Community 13|Community 13]]
+- [[_COMMUNITY_Community 14|Community 14]]
+- [[_COMMUNITY_Community 15|Community 15]]
+- [[_COMMUNITY_Community 16|Community 16]]
+- [[_COMMUNITY_Community 17|Community 17]]
+- [[_COMMUNITY_Community 18|Community 18]]
+- [[_COMMUNITY_Community 19|Community 19]]
+- [[_COMMUNITY_Community 20|Community 20]]
+- [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
+- [[_COMMUNITY_Community 24|Community 24]]
+- [[_COMMUNITY_Community 25|Community 25]]
+- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
+- [[_COMMUNITY_Community 29|Community 29]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `SocketEventHandler` - 7 edges
-2. `SocketAuthService` - 6 edges
-3. `Socket Gateway` - 6 edges
-4. `SocketConnectListener` - 4 edges
-5. `SecurityConfig` - 3 edges
-6. `SocketDisconnectListener` - 3 edges
-7. `SocketServerRunner` - 3 edges
-8. `SocketGatewayApplication` - 2 edges
-9. `SocketServerConfig` - 2 edges
-10. `SocketGatewayApplicationTests` - 2 edges
+1. `Socket Gateway` - 13 edges
+2. `ConversationService` - 13 edges
+3. `SocketAuthService` - 8 edges
+4. `GlobalExceptionHandler` - 7 edges
+5. `ConversationController` - 7 edges
+6. `SocketEventHandler` - 7 edges
+7. `ConversationRepository` - 6 edges
+8. `ConversationParticipantRepository` - 5 edges
+9. `SocketConnectListener` - 4 edges
+10. `ChatRoomNames` - 4 edges
 
 ## Surprising Connections (you probably didn't know these)
 - None detected - all connections are within the same source files.
 
-## Communities (13 total, 12 thin omitted)
+## Communities (35 total, 27 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.17
-Nodes (11): code:bash (cp .env.example .env   # optional), code:javascript (import { io } from "socket.io-client";), code:javascript (// User A), code:javascript (io("http://localhost:9093", {), Dev connect (auth disabled), Events, JWT auth (production), Message flow (no DB yet) (+3 more)
+Cohesion: 0.07
+Nodes (9): ChatCoreClient, ConnectListener, ConversationSocketHandler, MessageMapper, MessageSocketHandler, MessageSocketPublisher, ChatRoomNames, SocketConnectListener (+1 more)
+
+### Community 1 - "Community 1"
+Cohesion: 0.12
+Nodes (4): SupportConversationIntegrationTest, ConversationParticipantRepository, ConversationRepository, ConversationService
+
+### Community 2 - "Community 2"
+Cohesion: 0.12
+Nodes (6): MessageServiceIntegrationTest, DisconnectListener, SocketAuthService, InfrastructureSocketHandler, SocketDisconnectListener, SocketClientHelper
+
+### Community 3 - "Community 3"
+Cohesion: 0.14
+Nodes (4): ApiResponse, PageResponse, GlobalExceptionHandler, MessageController
+
+### Community 4 - "Community 4"
+Cohesion: 0.13
+Nodes (18): Architecture, code:txt (socket/                    # Transport infra), code:javascript (const socket = io("http://localhost:9093", {), code:bash (./mvnw spring-boot:run -Dspring-boot.run.profiles=local), code:bash (./mvnw spring-boot:run), Database, Dev connect (auth disabled), Events (+10 more)
+
+### Community 5 - "Community 5"
+Cohesion: 0.15
+Nodes (5): BadRequestException, ConflictException, ForbiddenException, ResourceNotFoundException, RuntimeException
+
+### Community 6 - "Community 6"
+Cohesion: 0.18
+Nodes (3): MessageRepository, MessageService, PageableFactory
 
 ## Knowledge Gaps
-- **9 isolated node(s):** `SocketProperties`, `Auth`, `MessageSendRequest`, `MessageNewPayload`, `Ports` (+4 more)
+- **20 isolated node(s):** `SocketProperties`, `Auth`, `PageMeta`, `SendMessageRequest`, `MessageResponse` (+15 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `SocketProperties`, `Auth`, `MessageSendRequest` to the rest of the system?**
-  _9 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `ConversationController` connect `Community 7` to `Community 2`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **What connects `SocketProperties`, `Auth`, `PageMeta` to the rest of the system?**
+  _20 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Community 0` be split into smaller, more focused modules?**
+  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.12 - nodes in this community are weakly interconnected._
+- **Should `Community 2` be split into smaller, more focused modules?**
+  _Cohesion score 0.12 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.14 - nodes in this community are weakly interconnected._
+- **Should `Community 4` be split into smaller, more focused modules?**
+  _Cohesion score 0.13 - nodes in this community are weakly interconnected._

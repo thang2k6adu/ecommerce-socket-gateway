@@ -1,6 +1,7 @@
 package com.ecommerce.socketgateway.security;
 
 import com.corundumstudio.socketio.HandshakeData;
+import com.ecommerce.socketgateway.common.security.ChatUserContext;
 import com.ecommerce.socketgateway.config.SocketProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Slf4j
@@ -33,10 +35,11 @@ public class SocketAuthService {
 	private Optional<String> resolveDevUserId(HandshakeData handshake) {
 		String userId = firstNonBlank(
 				handshake.getSingleUrlParam("userId"),
-				handshake.getHttpHeaders().get("X-User-Id")
+				firstHeader(handshake, ChatUserContext.DEV_USER_HEADER)
 		);
 		if (!StringUtils.hasText(userId)) {
-			log.warn("[SOCKET-AUTH] Dev mode: missing userId query param or X-User-Id header");
+			log.warn("[SOCKET-AUTH] Local mode: missing userId query param or {} header",
+					ChatUserContext.DEV_USER_HEADER);
 			return Optional.empty();
 		}
 		return Optional.of(userId.trim());
@@ -45,15 +48,15 @@ public class SocketAuthService {
 	private Optional<String> resolveJwtUserId(HandshakeData handshake) {
 		String token = extractToken(handshake);
 		if (!StringUtils.hasText(token)) {
-			log.warn("[SOCKET-AUTH] JWT mode: missing token in auth or Authorization header");
+			log.warn("[SOCKET-AUTH] Missing JWT in auth payload or Authorization header");
 			return Optional.empty();
 		}
 
 		try {
 			Jwt jwt = jwtDecoder.decode(token.trim());
-			String userId = firstNonBlank(jwt.getSubject(), jwt.getClaimAsString("preferred_username"));
+			String userId = jwt.getSubject();
 			if (!StringUtils.hasText(userId)) {
-				log.warn("[SOCKET-AUTH] JWT mode: token has no subject or preferred_username");
+				log.warn("[SOCKET-AUTH] JWT has no subject claim");
 				return Optional.empty();
 			}
 			return Optional.of(userId.trim());
@@ -64,22 +67,45 @@ public class SocketAuthService {
 	}
 
 	private String extractToken(HandshakeData handshake) {
-		String authToken = handshake.getSingleUrlParam("token");
-		if (StringUtils.hasText(authToken)) {
-			return authToken;
+		String fromAuthPayload = extractTokenFromAuthPayload(handshake);
+		if (StringUtils.hasText(fromAuthPayload)) {
+			return fromAuthPayload;
+		}
+
+		String fromQuery = handshake.getSingleUrlParam("token");
+		if (StringUtils.hasText(fromQuery)) {
+			return fromQuery;
 		}
 
 		List<String> authHeaders = handshake.getHttpHeaders().getAll("Authorization");
-		if (authHeaders == null || authHeaders.isEmpty()) {
-			return null;
-		}
-
-		for (String header : authHeaders) {
-			if (header != null && header.startsWith(BEARER_PREFIX)) {
-				return header.substring(BEARER_PREFIX.length()).trim();
+		if (authHeaders != null) {
+			for (String header : authHeaders) {
+				if (header != null && header.startsWith(BEARER_PREFIX)) {
+					return header.substring(BEARER_PREFIX.length()).trim();
+				}
 			}
 		}
 		return null;
+	}
+
+	private String extractTokenFromAuthPayload(HandshakeData handshake) {
+		Map<String, List<String>> urlParams = handshake.getUrlParams();
+		if (urlParams == null) {
+			return null;
+		}
+		List<String> tokenParams = urlParams.get("token");
+		if (tokenParams != null && !tokenParams.isEmpty() && StringUtils.hasText(tokenParams.get(0))) {
+			return tokenParams.get(0);
+		}
+		return null;
+	}
+
+	private String firstHeader(HandshakeData handshake, String headerName) {
+		List<String> values = handshake.getHttpHeaders().getAll(headerName);
+		if (values == null || values.isEmpty()) {
+			return null;
+		}
+		return values.get(0);
 	}
 
 	private String firstNonBlank(String... values) {

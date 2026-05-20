@@ -38,7 +38,11 @@ socket:
   port: ${SOCKET_PORT:9093}
   allowed-origin: ${SOCKET_ALLOWED_ORIGIN:*}
   auth:
-    enabled: ${SOCKET_AUTH_ENABLED:false}
+    enabled: ${SOCKET_AUTH_ENABLED:true}
+
+app:
+  security:
+    keycloak-client-id: ${KEYCLOAK_CLIENT_ID:ecommerce-backend}
 
 management:
   endpoints:

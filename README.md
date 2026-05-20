@@ -9,14 +9,14 @@ socket/                    # Transport infra — stays in gateway
   support/                 # SocketClientHelper, SocketAckHelper
   InfrastructureSocketHandler.java   # ping
   SocketServerRunner.java            # event registry
+  ChatRoomNames.java                 # user: / conversation: room helpers
 modules/chat/
   conversation/
     ConversationSocketHandler.java   # conversation:join / leave
   message/
     MessageSocketHandler.java        # message:send (inbound)
     MessageSocketPublisher.java      # message fan-out (outbound)
-socket/
-  ChatRoomNames.java                 # user: / conversation: room helpers
+    dto/socket/MessageRealtimePayload.java
 common/                    # Shared API, exceptions, pagination
 ```
 
@@ -27,53 +27,58 @@ common/                    # Shared API, exceptions, pagination
 | 8090 | HTTP REST + actuator |
 | 9093 | Socket.IO |
 
-## Database
+## Security (Keycloak JWT — default)
 
-PostgreSQL database `chat_db` (default port `5434` in `.env.example`).
+Same pattern as Product Service: OAuth2 Resource Server with `issuer-uri` / `jwk-set-uri`.
+
+- REST: `Authorization: Bearer <access_token>`
+- Socket: connect with token
+
+```javascript
+const socket = io("http://localhost:9093", {
+  auth: { token: accessToken },
+  transports: ["websocket", "polling"],
+});
+```
+
+`userId` in chat DB = JWT **`sub`** (Keycloak user id).
+
+## Local dev (no Keycloak)
 
 ```bash
-createdb chat_db   # or via Docker
+./mvnw spring-boot:run -Dspring-boot.run.profiles=local
+```
+
+Profile `local` sets `socket.auth.enabled=false` and enables `X-User-Id` / `?userId=` for quick tests.
+
+## Database
+
+PostgreSQL `chat_db` (default port `5434`).
+
+```bash
 ./mvnw spring-boot:run
 ```
 
-## REST API (dev: header `X-User-Id`)
+## REST API
 
 | Method | Path | Description |
 |--------|------|-------------|
-| POST | `/api/chat/conversations` | Create/get direct conversation `{ "otherUserId": "user-b" }` |
-| GET | `/api/chat/conversations` | List my conversations |
+| POST | `/api/chat/conversations` | Create/get direct `{ "otherUserId": "<jwt-sub>" }` |
+| GET | `/api/chat/conversations` | List conversations |
 | GET | `/api/chat/conversations/{id}` | Get conversation |
-| POST | `/api/chat/messages` | Send message `{ "conversationId", "content", "clientMessageId?" }` |
+| POST | `/api/chat/messages` | Send message |
 | GET | `/api/chat/conversations/{id}/messages` | List messages (paginated) |
 
 ## Socket events
 
 | Emit | Description |
 |------|-------------|
-| `message:send` | Same body as REST `SendMessageRequest` — saves DB + realtime |
-| `conversation:join` | Join `conversation:{id}` (membership checked) |
+| `message:send` | Save + realtime |
+| `conversation:join` | Join room (membership checked) |
 | `ping` | Health |
 
 | Listen | Description |
 |--------|-------------|
-| `message:new` | Inbox realtime (user room) |
-| `message:created` | Open chat screen (conversation room) |
+| `message:new` | User inbox room |
+| `message:created` | Open conversation room |
 | `connected` | After connect |
-
-## Dev connect
-
-```javascript
-const socket = io("http://localhost:9093", { query: { userId: "user-a" } });
-socket.emit("message:send", {
-  conversationId: 1,
-  content: "Hi",
-  clientMessageId: "tmp-1",
-});
-```
-
-```bash
-curl -X POST http://localhost:8090/api/chat/conversations \
-  -H "Content-Type: application/json" \
-  -H "X-User-Id: user-a" \
-  -d '{"otherUserId":"user-b"}'
-```

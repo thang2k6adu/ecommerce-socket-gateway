@@ -1,0 +1,3 @@
+socket:
+  auth:
+    enabled: false

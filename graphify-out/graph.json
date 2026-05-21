@@ -9,7 +9,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/SocketGatewayApplication.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socketgatewayapplication_java",
-      "community": 14,
+      "community": 15,
       "norm_label": "socketgatewayapplication.java"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/SocketGatewayApplication.java",
       "source_location": "L7",
       "id": "socketgateway_socketgatewayapplication_socketgatewayapplication",
-      "community": 14,
+      "community": 15,
       "norm_label": "socketgatewayapplication"
     },
     {
@@ -27,7 +27,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/SocketGatewayApplication.java",
       "source_location": "L11",
       "id": "socketgateway_socketgatewayapplication_socketgatewayapplication_main",
-      "community": 14,
+      "community": 15,
       "norm_label": ".main()"
     },
     {
@@ -36,7 +36,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/config/SocketProperties.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_config_socketproperties_java",
-      "community": 15,
+      "community": 16,
       "norm_label": "socketproperties.java"
     },
     {
@@ -45,7 +45,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/config/SocketProperties.java",
       "source_location": "L7",
       "id": "config_socketproperties_socketproperties",
-      "community": 15,
+      "community": 16,
       "norm_label": "socketproperties"
     },
     {
@@ -54,7 +54,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/config/SocketProperties.java",
       "source_location": "L20",
       "id": "config_socketproperties_auth",
-      "community": 15,
+      "community": 16,
       "norm_label": "auth"
     },
     {
@@ -63,7 +63,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/config/SocketServerConfig.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_config_socketserverconfig_java",
-      "community": 16,
+      "community": 17,
       "norm_label": "socketserverconfig.java"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/config/SocketServerConfig.java",
       "source_location": "L7",
       "id": "config_socketserverconfig_socketserverconfig",
-      "community": 16,
+      "community": 17,
       "norm_label": "socketserverconfig"
     },
     {
@@ -81,7 +81,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/config/SocketServerConfig.java",
       "source_location": "L10",
       "id": "config_socketserverconfig_socketserverconfig_socketioserver",
-      "community": 16,
+      "community": 17,
       "norm_label": ".socketioserver()"
     },
     {
@@ -144,7 +144,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_security_socketauthservice_java",
-      "community": 2,
+      "community": 1,
       "norm_label": "socketauthservice.java"
     },
     {
@@ -153,7 +153,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L18",
       "id": "security_socketauthservice_socketauthservice",
-      "community": 2,
+      "community": 1,
       "norm_label": "socketauthservice"
     },
     {
@@ -162,7 +162,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L28",
       "id": "security_socketauthservice_socketauthservice_resolveuserid",
-      "community": 2,
+      "community": 1,
       "norm_label": ".resolveuserid()"
     },
     {
@@ -171,7 +171,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L35",
       "id": "security_socketauthservice_socketauthservice_resolvedevuserid",
-      "community": 2,
+      "community": 1,
       "norm_label": ".resolvedevuserid()"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L48",
       "id": "security_socketauthservice_socketauthservice_resolvejwtuserid",
-      "community": 2,
+      "community": 1,
       "norm_label": ".resolvejwtuserid()"
     },
     {
@@ -189,7 +189,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L69",
       "id": "security_socketauthservice_socketauthservice_extracttoken",
-      "community": 2,
+      "community": 1,
       "norm_label": ".extracttoken()"
     },
     {
@@ -198,7 +198,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L91",
       "id": "security_socketauthservice_socketauthservice_extracttokenfromauthpayload",
-      "community": 2,
+      "community": 1,
       "norm_label": ".extracttokenfromauthpayload()"
     },
     {
@@ -207,7 +207,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L103",
       "id": "security_socketauthservice_socketauthservice_firstheader",
-      "community": 2,
+      "community": 1,
       "norm_label": ".firstheader()"
     },
     {
@@ -216,7 +216,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/security/SocketAuthService.java",
       "source_location": "L111",
       "id": "security_socketauthservice_socketauthservice_firstnonblank",
-      "community": 2,
+      "community": 1,
       "norm_label": ".firstnonblank()"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketConnectListener.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_socketconnectlistener_java",
-      "community": 0,
+      "community": 10,
       "norm_label": "socketconnectlistener.java"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketConnectListener.java",
       "source_location": "L12",
       "id": "socket_socketconnectlistener_socketconnectlistener",
-      "community": 0,
+      "community": 10,
       "norm_label": "socketconnectlistener"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "",
       "source_location": "",
       "id": "connectlistener",
-      "community": 0,
+      "community": 10,
       "norm_label": "connectlistener"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketConnectListener.java",
       "source_location": "L21",
       "id": "socket_socketconnectlistener_socketconnectlistener_onconnect",
-      "community": 0,
+      "community": 10,
       "norm_label": ".onconnect()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketConnectListener.java",
       "source_location": "L33",
       "id": "socket_socketconnectlistener_socketconnectlistener_registerclient",
-      "community": 0,
+      "community": 10,
       "norm_label": ".registerclient()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketDisconnectListener.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_socketdisconnectlistener_java",
-      "community": 2,
+      "community": 1,
       "norm_label": "socketdisconnectlistener.java"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketDisconnectListener.java",
       "source_location": "L8",
       "id": "socket_socketdisconnectlistener_socketdisconnectlistener",
-      "community": 2,
+      "community": 1,
       "norm_label": "socketdisconnectlistener"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "",
       "source_location": "",
       "id": "disconnectlistener",
-      "community": 2,
+      "community": 1,
       "norm_label": "disconnectlistener"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketDisconnectListener.java",
       "source_location": "L12",
       "id": "socket_socketdisconnectlistener_socketdisconnectlistener_ondisconnect",
-      "community": 2,
+      "community": 1,
       "norm_label": ".ondisconnect()"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketServerRunner.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_socketserverrunner_java",
-      "community": 10,
+      "community": 11,
       "norm_label": "socketserverrunner.java"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketServerRunner.java",
       "source_location": "L14",
       "id": "socket_socketserverrunner_socketserverrunner",
-      "community": 10,
+      "community": 11,
       "norm_label": "socketserverrunner"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketServerRunner.java",
       "source_location": "L27",
       "id": "socket_socketserverrunner_socketserverrunner_start",
-      "community": 10,
+      "community": 11,
       "norm_label": ".start()"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/SocketServerRunner.java",
       "source_location": "L44",
       "id": "socket_socketserverrunner_socketserverrunner_stop",
-      "community": 10,
+      "community": 11,
       "norm_label": ".stop()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/InfrastructureSocketHandler.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_infrastructuresockethandler_java",
-      "community": 2,
+      "community": 1,
       "norm_label": "infrastructuresockethandler.java"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/InfrastructureSocketHandler.java",
       "source_location": "L12",
       "id": "socket_infrastructuresockethandler_infrastructuresockethandler",
-      "community": 2,
+      "community": 1,
       "norm_label": "infrastructuresockethandler"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/InfrastructureSocketHandler.java",
       "source_location": "L19",
       "id": "socket_infrastructuresockethandler_infrastructuresockethandler_onping",
-      "community": 2,
+      "community": 1,
       "norm_label": ".onping()"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/ChatRoomNames.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_chatroomnames_java",
-      "community": 0,
+      "community": 2,
       "norm_label": "chatroomnames.java"
     },
     {
@@ -378,7 +378,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/ChatRoomNames.java",
       "source_location": "L3",
       "id": "socket_chatroomnames_chatroomnames",
-      "community": 0,
+      "community": 2,
       "norm_label": "chatroomnames"
     },
     {
@@ -387,7 +387,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/ChatRoomNames.java",
       "source_location": "L8",
       "id": "socket_chatroomnames_chatroomnames_chatroomnames",
-      "community": 0,
+      "community": 2,
       "norm_label": ".chatroomnames()"
     },
     {
@@ -396,7 +396,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/ChatRoomNames.java",
       "source_location": "L11",
       "id": "socket_chatroomnames_chatroomnames_userroom",
-      "community": 0,
+      "community": 10,
       "norm_label": ".userroom()"
     },
     {
@@ -405,7 +405,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/ChatRoomNames.java",
       "source_location": "L15",
       "id": "socket_chatroomnames_chatroomnames_conversationroom",
-      "community": 0,
+      "community": 2,
       "norm_label": ".conversationroom()"
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketClientHelper.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_support_socketclienthelper_java",
-      "community": 2,
+      "community": 1,
       "norm_label": "socketclienthelper.java"
     },
     {
@@ -423,7 +423,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketClientHelper.java",
       "source_location": "L8",
       "id": "support_socketclienthelper_socketclienthelper",
-      "community": 2,
+      "community": 1,
       "norm_label": "socketclienthelper"
     },
     {
@@ -432,7 +432,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketClientHelper.java",
       "source_location": "L11",
       "id": "support_socketclienthelper_socketclienthelper_requireuserid",
-      "community": 2,
+      "community": 1,
       "norm_label": ".requireuserid()"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketAckHelper.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_socket_support_socketackhelper_java",
-      "community": 0,
+      "community": 2,
       "norm_label": "socketackhelper.java"
     },
     {
@@ -450,7 +450,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketAckHelper.java",
       "source_location": "L8",
       "id": "support_socketackhelper_socketackhelper",
-      "community": 0,
+      "community": 2,
       "norm_label": "socketackhelper"
     },
     {
@@ -459,7 +459,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketAckHelper.java",
       "source_location": "L11",
       "id": "support_socketackhelper_socketackhelper_reject",
-      "community": 0,
+      "community": 2,
       "norm_label": ".reject()"
     },
     {
@@ -468,7 +468,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/socket/support/SocketAckHelper.java",
       "source_location": "L17",
       "id": "support_socketackhelper_socketackhelper_success",
-      "community": 0,
+      "community": 2,
       "norm_label": ".success()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ResourceNotFoundException.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_common_exception_resourcenotfoundexception_java",
-      "community": 5,
+      "community": 6,
       "norm_label": "resourcenotfoundexception.java"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ResourceNotFoundException.java",
       "source_location": "L3",
       "id": "exception_resourcenotfoundexception_resourcenotfoundexception",
-      "community": 5,
+      "community": 6,
       "norm_label": "resourcenotfoundexception"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "",
       "source_location": "",
       "id": "runtimeexception",
-      "community": 5,
+      "community": 6,
       "norm_label": "runtimeexception"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ResourceNotFoundException.java",
       "source_location": "L5",
       "id": "exception_resourcenotfoundexception_resourcenotfoundexception_resourcenotfoundexception",
-      "community": 5,
+      "community": 6,
       "norm_label": ".resourcenotfoundexception()"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/BadRequestException.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_common_exception_badrequestexception_java",
-      "community": 5,
+      "community": 6,
       "norm_label": "badrequestexception.java"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/BadRequestException.java",
       "source_location": "L3",
       "id": "exception_badrequestexception_badrequestexception",
-      "community": 5,
+      "community": 6,
       "norm_label": "badrequestexception"
     },
     {
@@ -621,7 +621,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/BadRequestException.java",
       "source_location": "L5",
       "id": "exception_badrequestexception_badrequestexception_badrequestexception",
-      "community": 5,
+      "community": 6,
       "norm_label": ".badrequestexception()"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ForbiddenException.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_common_exception_forbiddenexception_java",
-      "community": 5,
+      "community": 6,
       "norm_label": "forbiddenexception.java"
     },
     {
@@ -639,7 +639,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ForbiddenException.java",
       "source_location": "L3",
       "id": "exception_forbiddenexception_forbiddenexception",
-      "community": 5,
+      "community": 6,
       "norm_label": "forbiddenexception"
     },
     {
@@ -648,7 +648,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ForbiddenException.java",
       "source_location": "L5",
       "id": "exception_forbiddenexception_forbiddenexception_forbiddenexception",
-      "community": 5,
+      "community": 6,
       "norm_label": ".forbiddenexception()"
     },
     {
@@ -729,7 +729,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ConflictException.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_common_exception_conflictexception_java",
-      "community": 5,
+      "community": 6,
       "norm_label": "conflictexception.java"
     },
     {
@@ -738,7 +738,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ConflictException.java",
       "source_location": "L3",
       "id": "exception_conflictexception_conflictexception",
-      "community": 5,
+      "community": 6,
       "norm_label": "conflictexception"
     },
     {
@@ -747,7 +747,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/exception/ConflictException.java",
       "source_location": "L5",
       "id": "exception_conflictexception_conflictexception_conflictexception",
-      "community": 5,
+      "community": 6,
       "norm_label": ".conflictexception()"
     },
     {
@@ -756,7 +756,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/ChatUserContext.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_common_security_chatusercontext_java",
-      "community": 11,
+      "community": 12,
       "norm_label": "chatusercontext.java"
     },
     {
@@ -765,7 +765,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/ChatUserContext.java",
       "source_location": "L11",
       "id": "security_chatusercontext_chatusercontext",
-      "community": 11,
+      "community": 12,
       "norm_label": "chatusercontext"
     },
     {
@@ -774,7 +774,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/ChatUserContext.java",
       "source_location": "L19",
       "id": "security_chatusercontext_chatusercontext_requireuserid",
-      "community": 11,
+      "community": 12,
       "norm_label": ".requireuserid()"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/ChatUserContext.java",
       "source_location": "L39",
       "id": "security_chatusercontext_chatusercontext_requirejwtsubject",
-      "community": 11,
+      "community": 12,
       "norm_label": ".requirejwtsubject()"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/DevUserAuthenticationFilter.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_common_security_devuserauthenticationfilter_java",
-      "community": 12,
+      "community": 13,
       "norm_label": "devuserauthenticationfilter.java"
     },
     {
@@ -801,7 +801,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/DevUserAuthenticationFilter.java",
       "source_location": "L18",
       "id": "security_devuserauthenticationfilter_devuserauthenticationfilter",
-      "community": 12,
+      "community": 13,
       "norm_label": "devuserauthenticationfilter"
     },
     {
@@ -810,7 +810,7 @@
       "source_file": "",
       "source_location": "",
       "id": "onceperrequestfilter",
-      "community": 12,
+      "community": 13,
       "norm_label": "onceperrequestfilter"
     },
     {
@@ -819,7 +819,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/security/DevUserAuthenticationFilter.java",
       "source_location": "L22",
       "id": "security_devuserauthenticationfilter_devuserauthenticationfilter_dofilterinternal",
-      "community": 12,
+      "community": 13,
       "norm_label": ".dofilterinternal()"
     },
     {
@@ -864,7 +864,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationSocketHandler.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_conversation_conversationsockethandler_java",
-      "community": 0,
+      "community": 2,
       "norm_label": "conversationsockethandler.java"
     },
     {
@@ -873,7 +873,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationSocketHandler.java",
       "source_location": "L16",
       "id": "conversation_conversationsockethandler_conversationsockethandler",
-      "community": 0,
+      "community": 2,
       "norm_label": "conversationsockethandler"
     },
     {
@@ -882,7 +882,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationSocketHandler.java",
       "source_location": "L25",
       "id": "conversation_conversationsockethandler_conversationsockethandler_onjoin",
-      "community": 0,
+      "community": 2,
       "norm_label": ".onjoin()"
     },
     {
@@ -891,7 +891,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationSocketHandler.java",
       "source_location": "L49",
       "id": "conversation_conversationsockethandler_conversationsockethandler_onleave",
-      "community": 0,
+      "community": 2,
       "norm_label": ".onleave()"
     },
     {
@@ -900,7 +900,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageMapper.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_message_messagemapper_java",
-      "community": 0,
+      "community": 4,
       "norm_label": "messagemapper.java"
     },
     {
@@ -909,7 +909,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageMapper.java",
       "source_location": "L7",
       "id": "message_messagemapper_messagemapper",
-      "community": 0,
+      "community": 4,
       "norm_label": "messagemapper"
     },
     {
@@ -918,7 +918,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageMapper.java",
       "source_location": "L10",
       "id": "message_messagemapper_messagemapper_torealtimepayload",
-      "community": 0,
+      "community": 4,
       "norm_label": ".torealtimepayload()"
     },
     {
@@ -927,7 +927,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageSocketHandler.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_message_messagesockethandler_java",
-      "community": 0,
+      "community": 2,
       "norm_label": "messagesockethandler.java"
     },
     {
@@ -936,7 +936,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageSocketHandler.java",
       "source_location": "L17",
       "id": "message_messagesockethandler_messagesockethandler",
-      "community": 0,
+      "community": 2,
       "norm_label": "messagesockethandler"
     },
     {
@@ -945,7 +945,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageSocketHandler.java",
       "source_location": "L27",
       "id": "message_messagesockethandler_messagesockethandler_onsend",
-      "community": 0,
+      "community": 2,
       "norm_label": ".onsend()"
     },
     {
@@ -954,7 +954,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageSocketPublisher.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_message_messagesocketpublisher_java",
-      "community": 0,
+      "community": 4,
       "norm_label": "messagesocketpublisher.java"
     },
     {
@@ -963,7 +963,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageSocketPublisher.java",
       "source_location": "L13",
       "id": "message_messagesocketpublisher_messagesocketpublisher",
-      "community": 0,
+      "community": 4,
       "norm_label": "messagesocketpublisher"
     },
     {
@@ -972,7 +972,7 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageSocketPublisher.java",
       "source_location": "L24",
       "id": "message_messagesocketpublisher_messagesocketpublisher_publishmessagecreated",
-      "community": 0,
+      "community": 4,
       "norm_label": ".publishmessagecreated()"
     },
     {
@@ -1053,25 +1053,34 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
       "source_location": "L1",
       "id": "src_main_java_com_ecommerce_socketgateway_integrations_chatcore_chatcoreclient_java",
-      "community": 0,
+      "community": 2,
       "norm_label": "chatcoreclient.java"
     },
     {
       "label": "ChatCoreClient",
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
-      "source_location": "L14",
+      "source_location": "L13",
       "id": "chatcore_chatcoreclient_chatcoreclient",
-      "community": 0,
+      "community": 2,
       "norm_label": "chatcoreclient"
+    },
+    {
+      "label": ".ChatCoreClient()",
+      "file_type": "code",
+      "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
+      "source_location": "L18",
+      "id": "chatcore_chatcoreclient_chatcoreclient_chatcoreclient",
+      "community": 2,
+      "norm_label": ".chatcoreclient()"
     },
     {
       "label": ".sendMessage()",
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
-      "source_location": "L20",
+      "source_location": "L24",
       "id": "chatcore_chatcoreclient_chatcoreclient_sendmessage",
-      "community": 0,
+      "community": 2,
       "norm_label": ".sendmessage()"
     },
     {
@@ -1080,16 +1089,16 @@
       "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
       "source_location": "L38",
       "id": "chatcore_chatcoreclient_chatcoreclient_assertconversationjoinable",
-      "community": 0,
+      "community": 2,
       "norm_label": ".assertconversationjoinable()"
     },
     {
       "label": ".getParticipants()",
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
-      "source_location": "L51",
+      "source_location": "L47",
       "id": "chatcore_chatcoreclient_chatcoreclient_getparticipants",
-      "community": 0,
+      "community": 2,
       "norm_label": ".getparticipants()"
     },
     {
@@ -1116,7 +1125,7 @@
       "source_file": "src/test/java/com/ecommerce/socketgateway/SocketGatewayApplicationTests.java",
       "source_location": "L1",
       "id": "src_test_java_com_ecommerce_socketgateway_socketgatewayapplicationtests_java",
-      "community": 17,
+      "community": 18,
       "norm_label": "socketgatewayapplicationtests.java"
     },
     {
@@ -1125,7 +1134,7 @@
       "source_file": "src/test/java/com/ecommerce/socketgateway/SocketGatewayApplicationTests.java",
       "source_location": "L6",
       "id": "socketgateway_socketgatewayapplicationtests_socketgatewayapplicationtests",
-      "community": 17,
+      "community": 18,
       "norm_label": "socketgatewayapplicationtests"
     },
     {
@@ -1134,7 +1143,7 @@
       "source_file": "src/test/java/com/ecommerce/socketgateway/SocketGatewayApplicationTests.java",
       "source_location": "L9",
       "id": "socketgateway_socketgatewayapplicationtests_socketgatewayapplicationtests_contextloads",
-      "community": 17,
+      "community": 18,
       "norm_label": ".contextloads()"
     },
     {
@@ -1143,7 +1152,7 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "readme_md",
-      "community": 4,
+      "community": 5,
       "norm_label": "readme.md"
     },
     {
@@ -1152,7 +1161,7 @@
       "source_file": "README.md",
       "source_location": "L1",
       "id": "socket_gateway_ecommerce_readme_socket_gateway",
-      "community": 4,
+      "community": 5,
       "norm_label": "socket gateway"
     },
     {
@@ -1161,7 +1170,7 @@
       "source_file": "README.md",
       "source_location": "L8",
       "id": "socket_gateway_ecommerce_readme_architecture",
-      "community": 4,
+      "community": 5,
       "norm_label": "architecture"
     },
     {
@@ -1170,7 +1179,7 @@
       "source_file": "README.md",
       "source_location": "L10",
       "id": "socket_gateway_ecommerce_readme_codeblock_1",
-      "community": 4,
+      "community": 5,
       "norm_label": "code:txt (socket/                    # transport infra)"
     },
     {
@@ -1179,7 +1188,7 @@
       "source_file": "README.md",
       "source_location": "L24",
       "id": "socket_gateway_ecommerce_readme_ports",
-      "community": 4,
+      "community": 5,
       "norm_label": "ports"
     },
     {
@@ -1188,7 +1197,7 @@
       "source_file": "README.md",
       "source_location": "L29",
       "id": "socket_gateway_ecommerce_readme_runtime_config",
-      "community": 4,
+      "community": 5,
       "norm_label": "runtime config"
     },
     {
@@ -1197,7 +1206,7 @@
       "source_file": "README.md",
       "source_location": "L34",
       "id": "socket_gateway_ecommerce_readme_socket_events",
-      "community": 4,
+      "community": 5,
       "norm_label": "socket events"
     },
     {
@@ -1205,7 +1214,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PaginationConstants.java",
       "source_location": "L1",
-      "community": 18,
+      "community": 19,
       "norm_label": "paginationconstants.java",
       "id": "src_main_java_com_ecommerce_socketgateway_common_pagination_paginationconstants_java"
     },
@@ -1214,7 +1223,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PaginationConstants.java",
       "source_location": "L3",
-      "community": 18,
+      "community": 19,
       "norm_label": "paginationconstants",
       "id": "pagination_paginationconstants_paginationconstants"
     },
@@ -1223,7 +1232,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PaginationConstants.java",
       "source_location": "L9",
-      "community": 18,
+      "community": 19,
       "norm_label": ".paginationconstants()",
       "id": "pagination_paginationconstants_paginationconstants_paginationconstants"
     },
@@ -1250,7 +1259,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageableFactory.java",
       "source_location": "L1",
-      "community": 6,
+      "community": 4,
       "norm_label": "pageablefactory.java",
       "id": "src_main_java_com_ecommerce_socketgateway_common_pagination_pageablefactory_java"
     },
@@ -1259,7 +1268,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageableFactory.java",
       "source_location": "L10",
-      "community": 6,
+      "community": 4,
       "norm_label": "pageablefactory",
       "id": "pagination_pageablefactory_pageablefactory"
     },
@@ -1268,7 +1277,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageableFactory.java",
       "source_location": "L12",
-      "community": 6,
+      "community": 4,
       "norm_label": ".pageablefactory()",
       "id": "pagination_pageablefactory_pageablefactory_pageablefactory"
     },
@@ -1277,7 +1286,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageableFactory.java",
       "source_location": "L15",
-      "community": 6,
+      "community": 4,
       "norm_label": ".sorted()",
       "id": "pagination_pageablefactory_pageablefactory_sorted"
     },
@@ -1286,7 +1295,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageResponses.java",
       "source_location": "L1",
-      "community": 13,
+      "community": 14,
       "norm_label": "pageresponses.java",
       "id": "src_main_java_com_ecommerce_socketgateway_common_pagination_pageresponses_java"
     },
@@ -1295,7 +1304,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageResponses.java",
       "source_location": "L10",
-      "community": 13,
+      "community": 14,
       "norm_label": "pageresponses",
       "id": "pagination_pageresponses_pageresponses"
     },
@@ -1304,7 +1313,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageResponses.java",
       "source_location": "L12",
-      "community": 13,
+      "community": 14,
       "norm_label": ".pageresponses()",
       "id": "pagination_pageresponses_pageresponses_pageresponses"
     },
@@ -1313,7 +1322,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageResponses.java",
       "source_location": "L15",
-      "community": 1,
+      "community": 0,
       "norm_label": ".map()",
       "id": "pagination_pageresponses_pageresponses_map"
     },
@@ -1322,7 +1331,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/common/pagination/PageResponses.java",
       "source_location": "L28",
-      "community": 13,
+      "community": 14,
       "norm_label": ".metafrom()",
       "id": "pagination_pageresponses_pageresponses_metafrom"
     },
@@ -1331,7 +1340,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 0,
       "norm_label": "conversationrepository.java",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_conversation_conversationrepository_java"
     },
@@ -1340,7 +1349,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L14",
-      "community": 1,
+      "community": 0,
       "norm_label": "conversationrepository",
       "id": "conversation_conversationrepository_conversationrepository"
     },
@@ -1349,7 +1358,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L16",
-      "community": 1,
+      "community": 0,
       "norm_label": ".finddirectconversation()",
       "id": "conversation_conversationrepository_conversationrepository_finddirectconversation"
     },
@@ -1358,7 +1367,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L37",
-      "community": 1,
+      "community": 0,
       "norm_label": ".findallforuser()",
       "id": "conversation_conversationrepository_conversationrepository_findallforuser"
     },
@@ -1367,7 +1376,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L45",
-      "community": 1,
+      "community": 0,
       "norm_label": ".findbytypeandsupportcustomeruserid()",
       "id": "conversation_conversationrepository_conversationrepository_findbytypeandsupportcustomeruserid"
     },
@@ -1376,7 +1385,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L47",
-      "community": 1,
+      "community": 0,
       "norm_label": ".findunclaimedsupportconversations()",
       "id": "conversation_conversationrepository_conversationrepository_findunclaimedsupportconversations"
     },
@@ -1385,7 +1394,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationRepository.java",
       "source_location": "L55",
-      "community": 1,
+      "community": 0,
       "norm_label": ".findbyidforupdate()",
       "id": "conversation_conversationrepository_conversationrepository_findbyidforupdate"
     },
@@ -1394,7 +1403,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationParticipantRepository.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 0,
       "norm_label": "conversationparticipantrepository.java",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_conversation_conversationparticipantrepository_java"
     },
@@ -1403,7 +1412,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationParticipantRepository.java",
       "source_location": "L9",
-      "community": 1,
+      "community": 0,
       "norm_label": "conversationparticipantrepository",
       "id": "conversation_conversationparticipantrepository_conversationparticipantrepository"
     },
@@ -1412,7 +1421,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationParticipantRepository.java",
       "source_location": "L11",
-      "community": 1,
+      "community": 0,
       "norm_label": ".findbyconversationid()",
       "id": "conversation_conversationparticipantrepository_conversationparticipantrepository_findbyconversationid"
     },
@@ -1421,7 +1430,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationParticipantRepository.java",
       "source_location": "L13",
-      "community": 1,
+      "community": 0,
       "norm_label": ".findbyconversationidanduserid()",
       "id": "conversation_conversationparticipantrepository_conversationparticipantrepository_findbyconversationidanduserid"
     },
@@ -1430,7 +1439,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationParticipantRepository.java",
       "source_location": "L15",
-      "community": 1,
+      "community": 0,
       "norm_label": ".existsbyconversationidanduserid()",
       "id": "conversation_conversationparticipantrepository_conversationparticipantrepository_existsbyconversationidanduserid"
     },
@@ -1439,7 +1448,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationParticipantRepository.java",
       "source_location": "L17",
-      "community": 1,
+      "community": 0,
       "norm_label": ".countbyconversationid()",
       "id": "conversation_conversationparticipantrepository_conversationparticipantrepository_countbyconversationid"
     },
@@ -1448,7 +1457,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationMapper.java",
       "source_location": "L1",
-      "community": 19,
+      "community": 0,
       "norm_label": "conversationmapper.java",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_conversation_conversationmapper_java"
     },
@@ -1457,7 +1466,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationMapper.java",
       "source_location": "L11",
-      "community": 19,
+      "community": 0,
       "norm_label": "conversationmapper",
       "id": "conversation_conversationmapper_conversationmapper"
     },
@@ -1466,7 +1475,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationMapper.java",
       "source_location": "L14",
-      "community": 19,
+      "community": 0,
       "norm_label": ".toresponse()",
       "id": "conversation_conversationmapper_conversationmapper_toresponse"
     },
@@ -1475,7 +1484,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 0,
       "norm_label": "conversationservice.java",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_conversation_conversationservice_java"
     },
@@ -1484,7 +1493,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L19",
-      "community": 1,
+      "community": 0,
       "norm_label": "conversationservice",
       "id": "conversation_conversationservice_conversationservice"
     },
@@ -1493,7 +1502,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L29",
-      "community": 1,
+      "community": 0,
       "norm_label": ".createorgetdirectconversation()",
       "id": "conversation_conversationservice_conversationservice_createorgetdirectconversation"
     },
@@ -1502,7 +1511,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L44",
-      "community": 1,
+      "community": 0,
       "norm_label": ".createorgetsupportconversation()",
       "id": "conversation_conversationservice_conversationservice_createorgetsupportconversation"
     },
@@ -1511,7 +1520,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L51",
-      "community": 1,
+      "community": 0,
       "norm_label": ".listunclaimedsupportqueue()",
       "id": "conversation_conversationservice_conversationservice_listunclaimedsupportqueue"
     },
@@ -1520,7 +1529,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L58",
-      "community": 1,
+      "community": 0,
       "norm_label": ".claimsupportconversation()",
       "id": "conversation_conversationservice_conversationservice_claimsupportconversation"
     },
@@ -1529,7 +1538,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L94",
-      "community": 1,
+      "community": 0,
       "norm_label": ".listconversations()",
       "id": "conversation_conversationservice_conversationservice_listconversations"
     },
@@ -1538,7 +1547,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L100",
-      "community": 1,
+      "community": 0,
       "norm_label": ".getconversation()",
       "id": "conversation_conversationservice_conversationservice_getconversation"
     },
@@ -1547,7 +1556,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L105",
-      "community": 1,
+      "community": 0,
       "norm_label": ".joinconversation()",
       "id": "conversation_conversationservice_conversationservice_joinconversation"
     },
@@ -1556,7 +1565,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L109",
-      "community": 1,
+      "community": 0,
       "norm_label": ".assertparticipant()",
       "id": "conversation_conversationservice_conversationservice_assertparticipant"
     },
@@ -1565,7 +1574,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L115",
-      "community": 1,
+      "community": 0,
       "norm_label": ".getparticipantuserids()",
       "id": "conversation_conversationservice_conversationservice_getparticipantuserids"
     },
@@ -1574,7 +1583,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L121",
-      "community": 1,
+      "community": 0,
       "norm_label": ".createdirectconversation()",
       "id": "conversation_conversationservice_conversationservice_createdirectconversation"
     },
@@ -1583,7 +1592,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L141",
-      "community": 1,
+      "community": 0,
       "norm_label": ".createsupportconversation()",
       "id": "conversation_conversationservice_conversationservice_createsupportconversation"
     },
@@ -1592,7 +1601,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationService.java",
       "source_location": "L157",
-      "community": 1,
+      "community": 0,
       "norm_label": ".toresponse()",
       "id": "conversation_conversationservice_conversationservice_toresponse"
     },
@@ -1664,7 +1673,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/conversation/ConversationController.java",
       "source_location": "L77",
-      "community": 2,
+      "community": 1,
       "norm_label": ".get()",
       "id": "conversation_conversationcontroller_conversationcontroller_get"
     },
@@ -1754,7 +1763,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageRepository.java",
       "source_location": "L1",
-      "community": 6,
+      "community": 4,
       "norm_label": "messagerepository.java",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_message_messagerepository_java"
     },
@@ -1763,7 +1772,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageRepository.java",
       "source_location": "L10",
-      "community": 6,
+      "community": 4,
       "norm_label": "messagerepository",
       "id": "message_messagerepository_messagerepository"
     },
@@ -1772,7 +1781,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageRepository.java",
       "source_location": "L12",
-      "community": 6,
+      "community": 4,
       "norm_label": ".findbyconversation_idorderbycreatedatdesc()",
       "id": "message_messagerepository_messagerepository_findbyconversation_idorderbycreatedatdesc"
     },
@@ -1781,7 +1790,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageMapper.java",
       "source_location": "L11",
-      "community": 0,
+      "community": 4,
       "norm_label": ".toresponse()",
       "id": "message_messagemapper_messagemapper_toresponse"
     },
@@ -1790,7 +1799,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageService.java",
       "source_location": "L1",
-      "community": 6,
+      "community": 4,
       "norm_label": "messageservice.java",
       "id": "src_main_java_com_ecommerce_socketgateway_modules_chat_message_messageservice_java"
     },
@@ -1799,7 +1808,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageService.java",
       "source_location": "L26",
-      "community": 6,
+      "community": 4,
       "norm_label": "messageservice",
       "id": "message_messageservice_messageservice"
     },
@@ -1808,7 +1817,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageService.java",
       "source_location": "L40",
-      "community": 6,
+      "community": 4,
       "norm_label": ".sendmessage()",
       "id": "message_messageservice_messageservice_sendmessage"
     },
@@ -1817,7 +1826,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageService.java",
       "source_location": "L69",
-      "community": 6,
+      "community": 4,
       "norm_label": ".listmessages()",
       "id": "message_messageservice_messageservice_listmessages"
     },
@@ -1826,7 +1835,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/ecommerce/socketgateway/modules/chat/message/MessageService.java",
       "source_location": "L85",
-      "community": 6,
+      "community": 4,
       "norm_label": ".truncatepreview()",
       "id": "message_messageservice_messageservice_truncatepreview"
     },
@@ -1889,7 +1898,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/ecommerce/socketgateway/modules/chat/MessageServiceIntegrationTest.java",
       "source_location": "L1",
-      "community": 2,
+      "community": 1,
       "norm_label": "messageserviceintegrationtest.java",
       "id": "src_test_java_com_ecommerce_socketgateway_modules_chat_messageserviceintegrationtest_java"
     },
@@ -1898,7 +1907,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/ecommerce/socketgateway/modules/chat/MessageServiceIntegrationTest.java",
       "source_location": "L17",
-      "community": 2,
+      "community": 1,
       "norm_label": "messageserviceintegrationtest",
       "id": "chat_messageserviceintegrationtest_messageserviceintegrationtest"
     },
@@ -1907,7 +1916,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/ecommerce/socketgateway/modules/chat/MessageServiceIntegrationTest.java",
       "source_location": "L27",
-      "community": 2,
+      "community": 1,
       "norm_label": ".sendmessage_persistsandreturnsresponse()",
       "id": "chat_messageserviceintegrationtest_messageserviceintegrationtest_sendmessage_persistsandreturnsresponse"
     },
@@ -1916,7 +1925,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/ecommerce/socketgateway/modules/chat/SupportConversationIntegrationTest.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 0,
       "norm_label": "supportconversationintegrationtest.java",
       "id": "src_test_java_com_ecommerce_socketgateway_modules_chat_supportconversationintegrationtest_java"
     },
@@ -1925,7 +1934,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/ecommerce/socketgateway/modules/chat/SupportConversationIntegrationTest.java",
       "source_location": "L14",
-      "community": 1,
+      "community": 0,
       "norm_label": "supportconversationintegrationtest",
       "id": "chat_supportconversationintegrationtest_supportconversationintegrationtest"
     },
@@ -1934,7 +1943,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/ecommerce/socketgateway/modules/chat/SupportConversationIntegrationTest.java",
       "source_location": "L21",
-      "community": 1,
+      "community": 0,
       "norm_label": ".support_create_queue_claim_secondclaimconflict()",
       "id": "chat_supportconversationintegrationtest_supportconversationintegrationtest_support_create_queue_claim_secondclaimconflict"
     },
@@ -1943,7 +1952,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L30",
-      "community": 4,
+      "community": 5,
       "norm_label": "security (keycloak jwt \u2014 default)",
       "id": "socket_gateway_ecommerce_readme_security_keycloak_jwt_default"
     },
@@ -1952,7 +1961,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L37",
-      "community": 4,
+      "community": 5,
       "norm_label": "code:javascript (const socket = io(\"http://localhost:9093\", {)",
       "id": "socket_gateway_ecommerce_readme_codeblock_2"
     },
@@ -1961,7 +1970,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L46",
-      "community": 4,
+      "community": 5,
       "norm_label": "local dev (no keycloak)",
       "id": "socket_gateway_ecommerce_readme_local_dev_no_keycloak"
     },
@@ -1970,7 +1979,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L48",
-      "community": 4,
+      "community": 5,
       "norm_label": "code:bash (./mvnw spring-boot:run -dspring-boot.run.profiles=local)",
       "id": "socket_gateway_ecommerce_readme_codeblock_3"
     },
@@ -1979,7 +1988,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L54",
-      "community": 4,
+      "community": 5,
       "norm_label": "database",
       "id": "socket_gateway_ecommerce_readme_database"
     },
@@ -1988,7 +1997,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L58",
-      "community": 4,
+      "community": 5,
       "norm_label": "code:bash (./mvnw spring-boot:run)",
       "id": "socket_gateway_ecommerce_readme_codeblock_4"
     },
@@ -1997,7 +2006,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L75",
-      "community": 4,
+      "community": 5,
       "norm_label": "rest api",
       "id": "socket_gateway_ecommerce_readme_rest_api"
     },
@@ -2123,7 +2132,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L12",
-      "community": 4,
+      "community": 5,
       "norm_label": "run locally",
       "id": "socket_gateway_ecommerce_readme_run_locally"
     },
@@ -2132,7 +2141,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L21",
-      "community": 4,
+      "community": 5,
       "norm_label": "dev connect (auth disabled)",
       "id": "socket_gateway_ecommerce_readme_dev_connect_auth_disabled"
     },
@@ -2141,7 +2150,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L39",
-      "community": 4,
+      "community": 5,
       "norm_label": "events",
       "id": "socket_gateway_ecommerce_readme_events"
     },
@@ -2150,7 +2159,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L50",
-      "community": 4,
+      "community": 5,
       "norm_label": "message flow (no db yet)",
       "id": "socket_gateway_ecommerce_readme_message_flow_no_db_yet"
     },
@@ -2159,7 +2168,7 @@
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L68",
-      "community": 4,
+      "community": 5,
       "norm_label": "jwt auth (production)",
       "id": "socket_gateway_ecommerce_readme_jwt_auth_production"
     }
@@ -3608,6 +3617,16 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "chatcore_chatcoreclient_chatcoreclient",
+      "target": "chatcore_chatcoreclient_chatcoreclient_chatcoreclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/java/com/ecommerce/socketgateway/integrations/chatcore/ChatCoreClient.java",
       "source_location": "L20",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3711,9 +3730,9 @@
       "source_file": "README.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "socket_gateway_ecommerce_readme_socket_gateway",
-      "target": "socket_gateway_ecommerce_readme_runtime_config",
-      "confidence_score": 1.0
+      "target": "socket_gateway_ecommerce_readme_runtime_config"
     },
     {
       "relation": "contains",
@@ -5180,5 +5199,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "352f5ea0f82d0b8fb3c5bf7bf720c195595b1553"
+  "built_at_commit": "7976fb8c3ebe85c3b2a15b2a32fecd32d921f070"
 }
